@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Arthur\Uploader\UploaderRequest;
+use Arthur\Uploader\UploaderFacade as Uploader;
+
+class UploadController extends Controller
+{
+    /**
+     * @param UploadRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function upload(UploaderRequest $request)
+    {
+        try {
+
+            return response()->json(Uploader::upload($request->file('file')));
+
+        } catch (\Exception $exception){
+
+            return response()->json(['error' => $exception->getMessage()], 422);
+        }
+    }
+}

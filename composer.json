@@ -1,0 +1,28 @@
+{
+    "name": "arthur/uploader",
+    "description": "This package provides a flexible way to upload file in Laravel application",
+    "keywords": ["laravel","illuminate","upload","uploader"],
+    "authors": [
+        {
+            "name": "Arthur Alagulyan",
+            "email": "arturalagulyan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/console": "~5.0",
+        "illuminate/support": "~5.0"
+    },
+    "require-dev": {
+        "illuminate/database": "~5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-0": {
+            "Arthur\\Uploader": "src/uploader"
+        }
+    },
+    "minimum-stability": "dev"
+}

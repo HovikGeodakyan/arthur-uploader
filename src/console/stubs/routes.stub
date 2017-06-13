@@ -1,0 +1,5 @@
+
+/*
+* Upload service routes
+*/
+Route::post('/upload', 'UploadController@upload');
